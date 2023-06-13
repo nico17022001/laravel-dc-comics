@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ComicBookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ComicBookController::class,'index'])->name('home');
+
+
+
